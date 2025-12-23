@@ -1,8 +1,11 @@
-public class Hello {
+package classwork;
+
+public class arrays {
     public static void main(String[] args) {
         System.out.println("Hello world");
-        int a =8;
-                int b =7;
+        var str = "hello";
+        var i = 6;
+
 
     }
 }
