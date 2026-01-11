@@ -130,11 +130,10 @@ public class Task_3 {
          */
 
         int oddOrEven = 9;
-        if((oddOrEven&1) == 0){
+        if ((oddOrEven & 1) == 0) {
             System.out.println("even");
 
-        }
-        else
+        } else
             System.out.println("odd");
 
 
