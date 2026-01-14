@@ -1,6 +1,6 @@
 package homework;
 
-public class Variables {
+public class Task_1_Variables {
     public static void main(String[] args) {
         /*Սահմանում եք 3 հատ int տեսակի փոփոխական - a, b, c։ Ձեր ծրագիրը պետքա՝
 Գտնի տվյալ թվերի միջին թվաբանականը ու տպի (ճիշտ մաթեմատիկական արժեքը)։
