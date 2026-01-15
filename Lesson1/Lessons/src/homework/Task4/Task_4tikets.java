@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task_4tikets {
     public static void main(String[] args) {
         System.out.println("we have three typ of thikets 7000: 8000: 9000:");
-        System.out.println("7000 is 3 place\n8000 is 2 place\n9000 is 1 place");
+        System.out.println("7000 is 3 place\n8000 is 2 place\n12000 is 1 place");
 
         System.out.println("and also we have discount if you are 65 + or 18 -");
 
@@ -21,7 +21,7 @@ public class Task_4tikets {
 
 
         double place = switch (placeMony) {
-            case 1 -> 9000;
+            case 1 -> 12000;
             case 2 -> 8000;
             case 3 -> 7000;
             default -> 0;
