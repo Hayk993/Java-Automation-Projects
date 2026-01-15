@@ -17,7 +17,6 @@ public class AdvancedMonthTest {
             }
         }
 
-
         String month = switch (monthNumber) {
             case 1 -> "January - 31 days";
             case 2 -> "February - 28 days";

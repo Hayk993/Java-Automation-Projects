@@ -20,7 +20,6 @@ public class ArrayTask_2 {
         }
         if (!a){
             System.out.println("No mirror index");
-
         }
 
     }

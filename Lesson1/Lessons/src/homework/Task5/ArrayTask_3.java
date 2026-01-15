@@ -17,7 +17,6 @@ public class ArrayTask_3 {
             if (array[i] < 0) {
                 continue;
             }
-
             if (lastNonNegativeIndex != -1 && array[i] <= array[lastNonNegativeIndex]) {
                 System.out.println("Խախտման ինդեքսը՝ " + i);
                 ok = false;
@@ -26,7 +25,6 @@ public class ArrayTask_3 {
 
             lastNonNegativeIndex = i;
         }
-
         if (ok) {
             System.out.println("OK");
         }

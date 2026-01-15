@@ -32,7 +32,6 @@ public class ArrayTask_1 {
                 System.out.println("Stop the sum of array is larger than 100");
                 break;
             }
-
         }
         System.out.println("After array stop sum" + sumOf100);
 
