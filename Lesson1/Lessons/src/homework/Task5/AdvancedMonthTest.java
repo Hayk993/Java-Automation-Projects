@@ -1,15 +1,20 @@
-package homework.Task4;
+package homework.Task5;
 
 import java.util.Scanner;
 
-public class Task_4witSwitch {
+public class AdvancedMonthTest {
     public static void main(String[] args) {
-        Scanner scaner = new Scanner(System.in);
-        int monthNumber = scaner.nextInt();
-        String again ;
-        if (monthNumber > 12 || monthNumber < 1) {
-            System.out.println("Not a valid number, please enter 1-12 ");
-            System.exit(1);
+        Scanner scanner = new Scanner(System.in);
+        int monthNumber ;
+        while (true) {
+            System.out.print("please enter month number (1-12): ");
+            monthNumber = scanner.nextInt();
+
+            if (monthNumber >= 1 && monthNumber <= 12) {
+                break; // valid number, exit loop
+            } else {
+                System.out.println("Invalid number! Please enter a number between 1 and 12.");
+            }
         }
 
         String month = switch (monthNumber) {
@@ -25,13 +30,14 @@ public class Task_4witSwitch {
             case 10 -> "October - 31 days";
             case 11 -> "November - 30 days";
             case 12 -> "December - 31 days";
-            default -> "0";
-
-
+            default -> "Not a valid number, please enter 1-12 ";
         };
         System.out.println(month);
+        scanner.close();
 
 
 
     }
 }
+
+
