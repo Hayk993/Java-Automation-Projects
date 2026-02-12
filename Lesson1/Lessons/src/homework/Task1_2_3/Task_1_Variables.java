@@ -1,4 +1,4 @@
-package homework;
+package homework.Task1_2_3;
 
 public class Task_1_Variables {
     public static void main(String[] args) {
@@ -10,15 +10,17 @@ public class Task_1_Variables {
          */
 
         int a, b, c;
-        a = 13;
-        b = 18;
-        c = 99;
+        a = 3;
+        b = 1;
+        c = 9;
         double d = (a + b + c) / 3d;
         System.out.println(d);
         // 1
         double decimalPart = d % 1;
         System.out.println("first decmalPart variant " + decimalPart);
-
+        //
+        int abc = a * 100 + b * 10 + c;
+        System.out.println(abc);
         //2
         double decimalPart2 = d - (int) d;
         System.out.println("second decmalPart variant " + decimalPart2);
@@ -33,9 +35,8 @@ public class Task_1_Variables {
         int h = 3;
 
         int result = (t + h) * (t + h) * (t + h);
-        
-        System.out.println(result);
 
+        System.out.println(result);
 
 
     }

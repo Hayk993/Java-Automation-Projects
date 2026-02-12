@@ -1,6 +1,4 @@
-package homework;
-
-import java.sql.SQLOutput;
+package homework.Task1_2_3;
 
 public class Task_3 {
     public static void main(String[] args) {
