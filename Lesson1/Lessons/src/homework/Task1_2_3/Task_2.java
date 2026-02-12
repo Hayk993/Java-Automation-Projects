@@ -1,4 +1,4 @@
-package homework;
+package homework.Task1_2_3;
 
 public class Task_2 {
     public static void main(String[] args) {
@@ -53,6 +53,7 @@ public class Task_2 {
         int m = 15;
         int v = n*m;
         long castResult = (long) n * m;
+        System.out.println(v);
         System.out.println("castResult = " + castResult);
 
 

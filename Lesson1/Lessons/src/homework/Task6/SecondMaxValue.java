@@ -1,6 +1,6 @@
 package homework.Task6;
 
-public class SecondMaxValue {
+    public class SecondMaxValue {
     public static void main(String[] args) {
         //Գտնել ամբողջ թվերի array-ի մեջի 2-րդ ամենամեծ թիվը։
         int[] array = {5, 10, 3, 7};
