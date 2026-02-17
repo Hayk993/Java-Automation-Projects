@@ -3,6 +3,7 @@ package homework.Task9;
 public class Tax {
     int salary;
     double tax;
+    
 
 
     void calculateIncomeTax(int salary) {
