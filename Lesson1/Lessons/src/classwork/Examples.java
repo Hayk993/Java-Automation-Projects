@@ -2,15 +2,12 @@ package classwork;
 
 public class Examples {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        for (int i : array) {
-
-            System.out.println(i);
-            i = i*10;
-
-        }
-
-
+       int a = 10;
+       int b = a;
+           b = 1;
+        System.out.println(a);
+        System.out.println(b);
     }
 }
+
 
