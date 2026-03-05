@@ -8,6 +8,23 @@ public class Home {
     private double areaSize;
     private String address;
 
+    Home(int room , boolean entrance , int bathroomsNum, int balcony ,int areaSize ,String address){
+        this.roomNumber = room;
+        this.entrance = entrance;
+        this.bathroomsNum = bathroomsNum;
+        this.balcony = balcony;
+        this.areaSize = areaSize;
+        this.address = address;
+
+    }
+    Home (Home outer) {
+        roomNumber = outer.roomNumber;
+        entrance = outer.entrance;;
+        bathroomsNum = outer.bathroomsNum;;
+        balcony = outer.balcony;
+        areaSize = outer.areaSize;;
+        address = outer.address;
+    }
 
     public int getRoomNumber() {
         return roomNumber;
@@ -53,5 +70,14 @@ public class Home {
 
     public void setBalcony(int balcony) {
         this.balcony = balcony;
+    }
+    public void printInfo(){
+        System.out.println("the room number is " + roomNumber);
+        System.out.println("the is the entrance " + entrance);
+        System.out.println("the bathrooms number is " + bathroomsNum);
+        System.out.println("the balcony number is " + balcony);
+        System.out.println("the area size is " + areaSize);
+        System.out.println("the address " + address);
+
     }
 }
