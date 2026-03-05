@@ -26,5 +26,8 @@ public class TwoArrayEx {
         else {
             System.out.println("սյան բոլոր էլեմենտների գւմար հավաս չեն");
         }
+
+
     }
+
 }
