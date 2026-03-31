@@ -1,4 +1,4 @@
-package homework.Task14;
+package homework.task14;
 
 public class Author {
    private String name;
