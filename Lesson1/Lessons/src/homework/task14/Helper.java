@@ -1,4 +1,4 @@
-package homework.Task14;
+package homework.task14;
 
 /*
 Ստեղծեք օժանդակ (helper / utility) Կլաս, որտեղ կլինեն մեթոդներ՝

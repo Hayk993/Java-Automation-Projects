@@ -6,5 +6,6 @@ public class Manager extends Employee {
     public void work() {
         super.work();
         System.out.println("I am manager");
+
     }
 }

@@ -2,7 +2,7 @@
 // ընդ որում Գրիք ստեղծելու համար պարտադիր դաշտերն են միայն
 //Title, author, publishYear։
 // Մնացած դաշտերը կարող են ունենալ լռելյայն արժեքներ կամ լրացվել setter մեթոդներով։
-package homework.Task14;
+package homework.task14;
 
 public class Book {
 

@@ -1,8 +1,10 @@
 package homework.task15;
 
 public class Dog extends Animal {
-   public void makeSound(){
-       System.out.println("WOF");
-   }
+    @Override
+    public void makeSound() {
+        super.makeSound();
+        System.out.println("WOF");
+    }
 
 }
