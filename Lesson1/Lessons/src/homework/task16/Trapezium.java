@@ -26,7 +26,7 @@ public class Trapezium extends FigureGeometric {
     }
 
     public int perimeter() {
-        return dim1 + dim2 + dim3 +dim4;
+        return dim1 + dim2 + dim3 + dim4;
 
     }
 }

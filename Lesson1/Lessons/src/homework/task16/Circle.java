@@ -4,7 +4,6 @@ public class Circle extends FigureGeometric {
     final double pi = 3.14;
     int r;
 
-
     public Circle(String name, String color, int r) {
         super(name, color);
         this.r = r;
@@ -16,7 +15,8 @@ public class Circle extends FigureGeometric {
         return pi * (r * r);
     }
 
+    @Override
     public int perimeter() {
-        return (int)(2 * pi * r);
+        return (int) (2 * pi * r);
     }
 }

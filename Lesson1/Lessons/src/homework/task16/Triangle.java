@@ -33,14 +33,6 @@ public class Triangle extends FigureGeometric {
 
     }
 
-//    public void isRightTriangle(Triangle t) {
-//        if ((dim1 * dim1) + (dim2 * dim2) == (dim3 * dim3)) {
-//            System.out.println("true");
-//        } else {
-//            System.out.println("false");
-//        }
-//    }
-
     @Override
     public int perimeter() {
         return (int) (dim1 + dim2 + dim3);

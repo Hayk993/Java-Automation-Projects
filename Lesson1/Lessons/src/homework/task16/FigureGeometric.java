@@ -8,29 +8,28 @@ package homework.task16;
 //Պետքա հնաարվոր լինի նշված բոլոր տեսսկի պատկերներին վերաբերել ընդհանուր, որպես երկրաչափաակն պատկեր, ու վերցնել իրանց պարագիծն ու մակերեսը՝ օգտագործելով dynamic polymprohism։
 //Ունեցեք array, որի մեջ կլինեն տարբեր տեսակի պատկերներ։ Ծրագիրը պետքա պտտվի դրանց վրայով, որոշի դրանցից որի պարագիծնա մեծագույնը, ու վերջում տպի պարագիծն ու պատկերի անունը,
 //Խնդիրը լուծելուց կլինեք ուշադիր, առանց հավելյալ բարդացումների։ Գծեք հիերարխիան՝ խնդիրն ու իրա կետերը կարդալու հետ զուգահեռ, հասկացեք որի մեջ ինչ պետքա սահմանեք, ալգորիթմը մշակեք, նոր լուծեք։
-public abstract class FigureGeometric {
+public class FigureGeometric {
     private final String color;
     private final String name;
 
     FigureGeometric(String name, String color) {
-
         this.color = color;
         this.name = name;
-
     }
 
-    public abstract double  area() ;
-
-    public abstract int perimeter();
-
-
-
-    public  String getName(){
-        return this.name ;
-    }
-    public  String getColor(){
-        return this.color ;
+    public double area() {
+        return -1.0;
     }
 
+    public int perimeter() {
+        return -1;
+    }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
 }
