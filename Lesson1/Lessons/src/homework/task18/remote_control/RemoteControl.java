@@ -8,7 +8,7 @@ public class RemoteControl {
         this.sw = sw;
     }
 
-    public void SwitchOn() {
+    public void switchOn() {
         if (!isTurnOn) {
             sw.turnOn();
             isTurnOn = true;

@@ -17,7 +17,7 @@ public abstract class ResidentialBuilding {
 
     private double ceilingHeight;
     private boolean isCeilingHeight = false;
-    private boolean balcony;
+   // private boolean balcony;
     private boolean isBalcony = false;
     int rooms;
 
@@ -36,10 +36,12 @@ public abstract class ResidentialBuilding {
         }
     }
 
-    public void setBalcony(boolean balcony) {
-        if (!isBalcony) {
-            this.balcony = balcony;
-            isBalcony = false;
+    public final void setBalcony() {
+        if (!isBalcony){
+            isBalcony = true;
+            System.out.println("the balcony has created");
+        }else {
+            System.out.println("you already have balcony");
         }
     }
 

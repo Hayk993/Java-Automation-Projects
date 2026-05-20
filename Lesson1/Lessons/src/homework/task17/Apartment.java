@@ -13,8 +13,8 @@ public class Apartment extends ResidentialBuilding {
             System.exit(1);
         }
 
-
     }
+
     public int getFloor() {
         return floor;
     }

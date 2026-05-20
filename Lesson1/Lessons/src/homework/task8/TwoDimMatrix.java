@@ -1,4 +1,4 @@
-package homework.Task8;
+package homework.task8;
 public class TwoDimMatrix {
     public static void main(String[] args) {
         int[][] arr = {

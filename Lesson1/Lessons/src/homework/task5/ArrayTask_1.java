@@ -1,4 +1,4 @@
-package homework.Task5;
+package homework.task5;
 
 public class ArrayTask_1 {
     public static void main(String[] args) {

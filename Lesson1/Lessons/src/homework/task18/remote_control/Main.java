@@ -5,13 +5,10 @@ public class Main {
         LightBulb l = new LightBulb();
         Fan f = new Fan();
         RemoteControl rm = new RemoteControl(l);
-        rm.SwitchOn();
-        rm.SwitchOn();
-        rm.SwitchOn();
+        rm.switchOn();
+        rm.switchOn();
+        rm.switchOn();
         RemoteControl fan = new RemoteControl(f);
-        fan.SwitchOn();
-        fan.SwitchOn();
-        fan.SwitchOn();
 
     }
 

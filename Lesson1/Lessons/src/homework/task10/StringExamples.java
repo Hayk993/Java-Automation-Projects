@@ -1,4 +1,4 @@
-package homework.Task10;
+package homework.task10;
 
 public class StringExamples {
     public static String cutString(String str, char ch) {
