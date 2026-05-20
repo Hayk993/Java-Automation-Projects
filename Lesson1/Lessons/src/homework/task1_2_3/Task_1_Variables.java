@@ -1,4 +1,4 @@
-package homework.Task1_2_3;
+package homework.task1_2_3;
 
 public class Task_1_Variables {
     public static void main(String[] args) {

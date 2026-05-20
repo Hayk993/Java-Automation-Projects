@@ -1,4 +1,4 @@
-package homework.Task7;
+package homework.task7;
 
 public class IsPrime {
     public static void main(String[] args) {

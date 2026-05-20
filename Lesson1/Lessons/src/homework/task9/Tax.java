@@ -1,4 +1,4 @@
-package homework.Task9;
+package homework.task9;
 
 public class Tax {
     int salary;

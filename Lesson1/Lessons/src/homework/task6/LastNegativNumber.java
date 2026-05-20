@@ -1,4 +1,4 @@
-package homework.Task6;
+package homework.task6;
 
 public class LastNegativNumber {
     public static void main(String[] args) {

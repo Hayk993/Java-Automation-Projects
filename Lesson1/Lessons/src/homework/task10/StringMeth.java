@@ -1,4 +1,4 @@
-package homework.Task10;
+package homework.task10;
 
 public class StringMeth {
     public static void main(String[] args) {

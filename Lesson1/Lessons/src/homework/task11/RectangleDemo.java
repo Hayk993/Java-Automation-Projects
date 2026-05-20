@@ -1,4 +1,4 @@
-package homework.Task11;
+package homework.task11;
 
 public class RectangleDemo {
     public static void main(String[] args) {
