@@ -2,9 +2,9 @@ package homework.task28;
 
 public class Customer {
 
-    private String firstName;
-    private String lastName;
-    private String email;
+    private final String firstName;
+    private final String lastName;
+    private final String email;
 
     public Customer(String firstName,
                     String lastName,
@@ -36,12 +36,13 @@ public class Customer {
         if (!(o instanceof Customer customer))
             return false;
 
-        return email.equals(customer.email);
+        return email.equals(customer.email) && firstName.equals(customer.firstName) && lastName.equals(customer.lastName);
     }
 
     @Override
     public int hashCode() {
-        return email.hashCode();
+     return Objects.hash(firstName, lastName, email);
+}
 
     }
     @Override
