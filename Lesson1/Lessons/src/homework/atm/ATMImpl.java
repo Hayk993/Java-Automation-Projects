@@ -2,23 +2,14 @@ package homework.atm;
 
 public class ATMImpl implements ATMService {
     private ATMState state = ATMState.IDLE;
-
-    private final String correctPin = "1234";
-
+    private Card currentCard;
     private int pinAttempts = 0;
 
     @Override
-    public Result withdraw(int amount, int balance, int dailyLimitRemaining) {
-        return null;
-    }
-
-    @Override
-    public void insertCard() {
-
-        if (state == ATMState.IDLE) {
-            state = ATMState.PIN_VERIFICATION;
-            System.out.println("Card Inserted");
-        }
+    public void insertCard(Card card) {
+        currentCard = card;
+        state = ATMState.PIN_VERIFICATION;
+        System.out.println("Card Inserted");
     }
 
     @Override
@@ -28,7 +19,12 @@ public class ATMImpl implements ATMService {
             return false;
         }
 
-        if (pin.equals(correctPin)) {
+        if (!currentCard.isActive()) {
+            state = ATMState.CARD_BLOCKED;
+            return false;
+        }
+
+        if (pin.equals(currentCard.getPin())) {
 
             state = ATMState.AUTHENTICATED;
             pinAttempts = 0;
@@ -44,6 +40,7 @@ public class ATMImpl implements ATMService {
 
         if (pinAttempts == 3) {
 
+            currentCard.blockCard();
             state = ATMState.CARD_BLOCKED;
 
             System.out.println("Card Blocked");
@@ -55,54 +52,43 @@ public class ATMImpl implements ATMService {
     @Override
     public void ejectCard() {
 
-        state = ATMState.IDLE;
+        currentCard = null;
         pinAttempts = 0;
+        state = ATMState.IDLE;
 
         System.out.println("Card Ejected");
     }
 
     @Override
-    public String withdraw(boolean accountActive,
-                           int amount,
+    public Result withdraw(int amount,
                            int balance,
                            int dailyLimitRemaining) {
 
-        // Card is blocked
         if (state == ATMState.CARD_BLOCKED) {
-            return "DENIED_ACCOUNT_BLOCKED";
+            return Result.DENIED_ACCOUNT_BLOCKED;
         }
 
-        // User is not authenticated
         if (state != ATMState.AUTHENTICATED) {
-            return "DENIED_ACCOUNT_BLOCKED";
+            return Result.DENIED_ACCOUNT_BLOCKED;
         }
 
-        // Condition 1
-        if (!accountActive) {
-            return "DENIED_ACCOUNT_BLOCKED";
-        }
-
-        // Condition 2
         if (amount < 100 || amount > 20000 || amount % 100 != 0) {
-            return "DENIED_INVALID_AMOUNT";
+            return Result.DENIED_INVALID_AMOUNT;
         }
 
-        // Condition 3
         if (balance < amount) {
-            return "DENIED_INSUFFICIENT_BALANCE";
+            return Result.DENIED_INSUFFICIENT_BALANCE;
         }
 
-        // Condition 4
         if (amount > dailyLimitRemaining) {
-            return "DENIED_LIMIT_EXCEEDED";
+            return Result.DENIED_LIMIT_EXCEEDED;
         }
 
-        return "APPROVED";
+        return Result.APPROVED;
     }
 
     public ATMState getState() {
         return state;
     }
-
 
 }

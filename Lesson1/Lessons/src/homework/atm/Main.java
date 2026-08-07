@@ -38,8 +38,7 @@ public class Main {
 
     public static void runTest(ATMService atm, TestCase testCase) {
 
-        String actual = atm.withdraw(
-                testCase.isAccountActive(),
+        Result actual = atm.withdraw(
                 testCase.getAmount(),
                 testCase.getBalance(),
                 testCase.getDailyLimit()
@@ -55,6 +54,18 @@ public class Main {
         } else {
             System.out.println("FAIL");
         }
+
+        Card card = new Card(
+                "1234567890123456",
+                "1234",
+                true
+        );
+
+        ATMService atmService = new ATMImpl();
+        atmService.insertCard(card);
+        atmService.enterPin("1234");
+        atmService.ejectCard();
+
     }
 }
 
