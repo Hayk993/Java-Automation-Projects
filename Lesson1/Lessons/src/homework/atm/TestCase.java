@@ -2,16 +2,18 @@ package homework.atm;
 
 public class TestCase {
     private String testName;
-    private boolean accountActive;
     private int amount;
     private int balance;
     private int dailyLimit;
-    private String expectedResult;
+    private Result expectedResult;
 
-    public TestCase(String testName, boolean accountActive, int amount, int balance, int dailyLimit, String expectedResult) {
+    public TestCase(String testName,
+                    int amount,
+                    int balance,
+                    int dailyLimit,
+                    Result expectedResult) {
 
         this.testName = testName;
-        this.accountActive = accountActive;
         this.amount = amount;
         this.balance = balance;
         this.dailyLimit = dailyLimit;
@@ -20,10 +22,6 @@ public class TestCase {
 
     public String getTestName() {
         return testName;
-    }
-
-    public boolean isAccountActive() {
-        return accountActive;
     }
 
     public int getAmount() {
@@ -38,7 +36,7 @@ public class TestCase {
         return dailyLimit;
     }
 
-    public String getExpectedResult() {
+    public Result getExpectedResult() {
         return expectedResult;
     }
 }

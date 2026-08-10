@@ -7,8 +7,17 @@ public class Card {
     private boolean active;
 
     public Card(String cardNumber, String pin, boolean active) {
-        this.cardNumber = cardNumber;
-        this.pin = pin;
+
+        if (cardNumber.length() == 16) {
+            this.cardNumber = cardNumber;
+        } else {
+            System.out.println("Card number must contain 16 digits.");
+        }
+        if (pin.length() == 4) {
+            this.pin = pin;
+        } else {
+            System.out.println("PIN must contain 4 digits.");
+        }
         this.active = active;
     }
 
@@ -31,12 +40,5 @@ public class Card {
     public void activateCard() {
         active = true;
     }
-
-    @Override
-    public String toString() {
-        return "Card{" +
-                "cardNumber='" + cardNumber + '\'' +
-                ", active=" + active +
-                '}';
-    }
 }
+
