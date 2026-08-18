@@ -1,0 +1,9 @@
+package homework.atm;
+
+public enum Result {
+    APPROVED,
+    DENIED_ACCOUNT_BLOCKED,
+    DENIED_INVALID_AMOUNT,
+    DENIED_INSUFFICIENT_BALANCE,
+    DENIED_LIMIT_EXCEEDED
+}
