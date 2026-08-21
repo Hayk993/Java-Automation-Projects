@@ -16,4 +16,8 @@ public class CalculatorSubtractionTest {
 
         Assert.assertEquals(result, -10);
     }
+    @Test(groups = {"smoke"})
+    public void subtractionTest() {
+        Assert.assertEquals(calculator.subtract(20, 10), 10);
+    }
 }
