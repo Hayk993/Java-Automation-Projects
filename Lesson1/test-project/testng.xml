@@ -6,6 +6,11 @@
 
     <test name="Calculator Tests">
 
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
         <classes>
             <class name="CalculatorAdditionTest"/>
             <class name="CalculatorSubtractionTest"/>
